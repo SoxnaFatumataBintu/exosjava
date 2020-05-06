@@ -1,32 +1,43 @@
-import java.util.Scanner;
-import java.lang.Math;
-public class rectangle {
-    public static void main(String[] args) {
-    
-   
-        float longueur;
-        float largeur;
-       
-    
+public class Rectangle extends Figure{
+     
+           //Attributs Instances
+            private double largeur; 
+          //Attributs classe ou Attributs static
 
-    Scanner saisir= new Scanner(System.in);
-    System.out.println("Veuillez saisir la longueur");
-    longueur=saisir.nextFloat();
-    System.out.println("Veuillez saisir la largeur");
-    largeur=saisir.nextFloat();
+            //Constructeur => methode instance concrete
+              public Rectangle(double longueur,double largeur){
+                        
+                          this.longueur=longueur;
+                        
+                       
+                          this.largeur=largeur;
+                        
+              }
+               
+              //Getters  methodes instances concretes
+           
+              public double getLargeur(){
+                return this.largeur;
+             }
+             //setters  methodes instances concretes
+              public void setLargeur(double largeur){
+                 this.largeur=largeur;
+              }
+             
+              //Getters Setters  methodes static concretes
+            
 
-    float demi_perimetre=longueur+largeur;
-    float perimetre=(longueur+largeur)*2;
-    float surface=longueur*largeur;
-    double diagonale=Math.sqrt((longueur*longueur) +(largeur*largeur));
-    
-        if ((longueur>largeur) && (longueur>0 && largeur>0)) {
-            System.out.println("Le demi-perimetre est: "+ demi_perimetre);
-            System.out.println("Le perimetre est: " + perimetre);
-            System.out.println("La Surface est: " + surface);
-            System.out.println("La diagonale est: " + diagonale);
-        }else{
-            System.out.println("SYNTAX ERROR");
-        }
-}
-}
+              //metiers=>UC
+              //Redefinition
+                public double demiPerimetre(){
+                     return this.longueur + this.largeur;
+                }
+              
+                public double surface(){
+                  return this.longueur * this.largeur;
+                }
+                public double diagonale(){
+                  return Math.sqrt(Math.pow(this.longueur,2)+Math.pow(this.largeur,2));
+                }
+              
+  }
