@@ -1,0 +1,63 @@
+/*
+Switch
+    if(x==1){
+}
+    if(x==2){
+}
+    if(x==3){
+}
+//Remplacer par switch case
+int x=5;
+switch(x){
+  case 1:
+    
+     break;
+case 2:
+    
+     break;
+case 3:
+    
+     break;
+default:
+
+}
+
+*/
+
+ //Regles de Surcharge
+         //1-deux Methodes qui portent le meme nom et qui ont le meme type de retour
+         //2-Les deux Methodes ne doivent pas avoir le meme nombre d'arguments
+          //OU
+         //2-Si les deux Methodes ont le meme nombre d'arguments alors les arguments
+         // ne doivent pas etre du meme type
+      /* 
+        public double somme(double a,double b){
+        }
+         public double somme(double a,float b){
+        }
+         
+
+      */
+
+
+/*
+    Portée des variables => block  {}
+
+    {
+      int x=2;
+       {
+         x=-2;
+         int y=5;
+         int s=x+y;//3
+       }
+     int s=x+y;//Erreur
+     //x=2
+   }
+
+
+
+
+
+
+
+*/
